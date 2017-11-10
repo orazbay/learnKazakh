@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="CategoryTitleOverlayText">
+        <item name="android:paddingLeft">4px</item>
+        <item name="android:paddingBottom">4px</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:shadowColor">@color/colorPrimaryDark</item>
+        <item name="android:shadowDx">7</item>
+        <item name="android:shadowDy">7</item>
+        <item name="android:shadowRadius">7</item>
+    </style>
+
+    <style name="MyWordButton" parent="android:Widget.Button">
+        <item name="android:background">@drawable/selector_my_word_button</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/small_shadow_size</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:visible">false</item>
+    </style>
+
+
+    <style name="MyQueryWordTextView" parent="android:Widget.TextView">
+        <item name="android:background">@drawable/learn_word_background</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">@dimen/radius_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColorSecondary">@color/my_gray</item>
+        <item name="android:colorMultiSelectHighlight">@color/highlight</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+    </style>
+
+</resources>

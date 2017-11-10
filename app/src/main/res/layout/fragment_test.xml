@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2014  Igor Bogoslavskyi
+  ~ This file is part of LearnIt.
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/center_divider">
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tvEnd"
+            android:layout_above="@id/backgroundTV"
+            android:layout_centerHorizontal="true"
+            android:text="Вы ответили правильно"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp" />
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/backgroundTV"
+            android:layout_centerInParent="true"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_below="@id/backgroundTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:visibility="invisible"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/restartBtn"
+                android:text="Заново"
+                android:layout_toStartOf="@id/centerHorizontalDivider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:id="@+id/centerHorizontalDivider"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:visibility="invisible"
+                android:id="@+id/finishBtn"
+                android:text="Завершить"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@id/centerHorizontalDivider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ImageView
+        android:layout_below="@id/center_divider"
+        android:src="@drawable/uzor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <View
+        android:id="@+id/center_divider"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <kz.learn.orazbay.custom.views.FittingTextView
+            android:visibility="invisible"
+            android:id="@+id/word_to_ask"
+            style="@style/MyQueryWordTextView"
+            android:layout_weight="2"
+            android:layout_height="0dp"/>
+        <LinearLayout
+            android:gravity="bottom|center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:id="@+id/first_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <Button
+                    android:visibility="invisible"
+                    style="@style/MyWordButton"
+                    android:id="@+id/left_top_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <Button
+                    android:visibility="invisible"
+                    style="@style/MyWordButton"
+                    android:id="@+id/right_top_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/second_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <Button
+                    android:visibility="invisible"
+                    style="@style/MyWordButton"
+                    android:id="@+id/left_bottom_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <Button
+                    android:visibility="invisible"
+                    style="@style/MyWordButton"
+                    android:id="@+id/right_bottom_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Учим казахский</string>
+
+    <string name="start">Начать</string>
+    <string name="alphabet">Алфавит</string>
+    <string name="categories">Категории</string>
+    <string name="settings">Настройки</string>
+
+    <string name="learn_with_categories">Учите слова по категориям</string>
+    <string name="time_to_learn">Время учить слова</string>
+    <string name="consolidate_success_by_test">Закрепите успех тестом</string>
+    
+    
+
+</resources>
