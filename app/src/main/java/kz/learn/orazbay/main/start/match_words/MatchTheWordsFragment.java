@@ -1,21 +1,17 @@
-package kz.learn.orazbay.match_words;
+package kz.learn.orazbay.main.start.match_words;
 
-import android.animation.Animator;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.SurfaceHolder;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.daimajia.androidanimations.library.BaseViewAnimator;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
-import java.time.temporal.TemporalQueries;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -26,6 +22,7 @@ import java.util.Random;
 import kz.learn.orazbay.MyAbstractFragment;
 import kz.learn.orazbay.R;
 import kz.learn.orazbay.data.ControllerWords;
+import kz.learn.orazbay.main.AnimationInitter;
 import kz.learn.orazbay.models.Word;
 import kz.learn.orazbay.utils.MyAnimationHelper;
 
@@ -33,7 +30,7 @@ import kz.learn.orazbay.utils.MyAnimationHelper;
  * Created by orazbay on 11/8/17.
  */
 
-public class MatchTheWordsFragment extends MyAbstractFragment implements MatchTheWords {
+public class MatchTheWordsFragment extends MyAbstractFragment implements MatchTheWords,AnimationInitter {
     private View view;
     private int pairsLeft=6;
     ArrayList<CardWord> words;
@@ -136,4 +133,8 @@ public class MatchTheWordsFragment extends MyAbstractFragment implements MatchTh
         MyAnimationHelper.invokeForView(context,row4,R.anim.slide_in_up,null);
     }
 
+    @Override
+    public void show() {
+
+    }
 }

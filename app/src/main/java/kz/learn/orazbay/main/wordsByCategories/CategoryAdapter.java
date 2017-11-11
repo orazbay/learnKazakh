@@ -1,4 +1,4 @@
-package kz.learn.orazbay.main.start;
+package kz.learn.orazbay.main.wordsByCategories;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,8 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import kz.learn.orazbay.R;
-import kz.learn.orazbay.main.start.words.WordsFragment;
-import kz.learn.orazbay.main.start.words1.WordsFragment1;
+import kz.learn.orazbay.main.wordsByCategories.words.WordsFragment;
 import kz.learn.orazbay.utils.Functions;
 
 /**
@@ -53,7 +52,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Functions.ReplaceFragmentWithStack(context,new WordsFragment1());
+                Functions.ReplaceFragmentWithStack(context,new WordsFragment());
             }
         });
         holder.textView.setText(categories.get(position));

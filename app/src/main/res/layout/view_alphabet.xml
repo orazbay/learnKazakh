@@ -7,6 +7,7 @@
     android:padding="5dp"
     android:weightSum="6">
     <LinearLayout
+        android:id="@+id/row1"
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="0dp"
@@ -209,6 +210,7 @@
         </android.support.v7.widget.CardView>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/row2"
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="0dp"
@@ -411,6 +413,7 @@
         </android.support.v7.widget.CardView>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/row3"
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="0dp"
@@ -609,6 +612,7 @@
         </android.support.v7.widget.CardView>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/row4"
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="0dp"
@@ -807,6 +811,7 @@
         </android.support.v7.widget.CardView>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/row5"
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="0dp"
@@ -1005,6 +1010,7 @@
         </android.support.v7.widget.CardView>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/row6"
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="0dp"

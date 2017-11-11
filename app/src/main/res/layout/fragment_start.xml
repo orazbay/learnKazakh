@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:id="@+id/firstColumn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <Button
+            android:textColor="#005fb0"
+            android:textSize="30sp"
+            android:typeface="sans"
+            android:text="@string/match_the_words"
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <Button
+            android:enabled="false"
+            android:textSize="30sp"
+            android:text="@string/soon"
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:id="@+id/secondColumn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <Button
+            android:textColor="#005fb0"
+            android:textSize="30sp"
+            android:typeface="sans"
+            android:text="@string/questions"
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <Button
+            android:enabled="false"
+            android:textSize="30sp"
+            android:text="@string/soon"
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,6 +1,5 @@
-package kz.learn.orazbay.match_words;
+package kz.learn.orazbay.main.start.match_words;
 
-import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;

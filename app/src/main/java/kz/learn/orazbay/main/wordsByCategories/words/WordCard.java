@@ -1,10 +1,8 @@
-package kz.learn.orazbay.main.start.words1;
+package kz.learn.orazbay.main.wordsByCategories.words;
 
 import android.content.Context;
-import android.util.Log;
 import android.widget.TextView;
 
-import com.github.glomadrian.materialanimatedswitch.MaterialAnimatedSwitch;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
@@ -18,9 +16,7 @@ import com.mindorks.placeholderview.annotations.swipe.SwipeOut;
 import com.mindorks.placeholderview.annotations.swipe.SwipeOutState;
 
 import kz.learn.orazbay.R;
-import kz.learn.orazbay.data.ControllerWords;
 import kz.learn.orazbay.models.Word;
-import kz.learn.orazbay.utils.Functions;
 
 /**
  * Created by orazbay on 10/29/17.

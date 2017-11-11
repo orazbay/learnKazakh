@@ -1,4 +1,4 @@
-package kz.learn.orazbay.main.start.words1;
+package kz.learn.orazbay.main.wordsByCategories.words;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager;
 import com.mindorks.placeholderview.SwipeDecor;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
 import com.mindorks.placeholderview.listeners.ItemRemovedListener;
@@ -15,8 +14,7 @@ import com.mindorks.placeholderview.listeners.ItemRemovedListener;
 import kz.learn.orazbay.MyAbstractFragment;
 import kz.learn.orazbay.R;
 import kz.learn.orazbay.data.ControllerWords;
-import kz.learn.orazbay.main.start.words.HorizontalPagerAdapter;
-import kz.learn.orazbay.main.start.words1.test.TestFragment;
+import kz.learn.orazbay.main.wordsByCategories.words.test.TestFragment;
 import kz.learn.orazbay.models.Word;
 import kz.learn.orazbay.utils.Functions;
 
@@ -24,11 +22,11 @@ import kz.learn.orazbay.utils.Functions;
  * Created by orazbay on 10/29/17.
  */
 
-public class WordsFragment1 extends MyAbstractFragment {
+public class WordsFragment extends MyAbstractFragment {
     private View view;
     private SwipePlaceHolderView mSwipeView;
-    public WordsFragment1(){
-        super(WordsFragment1.class.getName());
+    public WordsFragment(){
+        super(WordsFragment.class.getName());
     }
 
     @Nullable
@@ -52,9 +50,9 @@ public class WordsFragment1 extends MyAbstractFragment {
                     bundle.putInt(TestFragment.WORDS_TYPE,TestFragment.WORDS_BY_CATEGORY);
                     bundle.putString("category","отбасы");
                     testFragment.setArguments(bundle);
-                    Functions.RemoveOldFragmentAndReplace(context,WordsFragment1.class.getName(),testFragment);
+                    Functions.RemoveOldFragmentAndReplace(context,WordsFragment.class.getName(),testFragment);
 //                    Functions.ReplaceFragmentWithStack(context,testFragment);
-//                    Functions.RemoveFragment(context,WordsFragment1.this);
+//                    Functions.RemoveFragment(context,WordsFragment.this);
 //                    Functions.AddFragment(context,testFragment);
                 }
             }

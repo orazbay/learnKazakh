@@ -1,4 +1,4 @@
-package kz.learn.orazbay.main.start.words1.test;
+package kz.learn.orazbay.main.wordsByCategories.words.test;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -24,7 +24,6 @@ import kz.learn.orazbay.R;
 import kz.learn.orazbay.custom.views.FittingTextView;
 import kz.learn.orazbay.data.ControllerWords;
 import kz.learn.orazbay.models.Word;
-import kz.learn.orazbay.utils.Functions;
 import kz.learn.orazbay.utils.MyAnimationHelper;
 
 /**

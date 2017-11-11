@@ -2,21 +2,13 @@ package kz.learn.orazbay;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v4.view.accessibility.AccessibilityManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.accessibility.AccessibilityManager;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-
-import io.realm.Realm;
 import kz.learn.orazbay.main.MainPageFragment;
-import kz.learn.orazbay.main.start.words1.test.TestFragment;
-import kz.learn.orazbay.match_words.MatchTheWordsFragment;
-import kz.learn.orazbay.models.Word;
+import kz.learn.orazbay.main.wordsByCategories.words.test.TestFragment;
 import kz.learn.orazbay.utils.Functions;
 
 public class MainActivity extends AppCompatActivity {

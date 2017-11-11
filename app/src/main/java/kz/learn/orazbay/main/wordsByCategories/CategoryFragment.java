@@ -1,11 +1,10 @@
-package kz.learn.orazbay.main.start;
+package kz.learn.orazbay.main.wordsByCategories;
 
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,13 +18,14 @@ import java.util.ArrayList;
 
 import kz.learn.orazbay.MyAbstractFragment;
 import kz.learn.orazbay.R;
+import kz.learn.orazbay.main.AnimationInitter;
 import kz.learn.orazbay.utils.Functions;
 
 /**
  * Created by orazbay on 10/29/17.
  */
 
-public class CategoryFragment extends MyAbstractFragment {
+public class CategoryFragment extends MyAbstractFragment implements AnimationInitter{
     private View view;
 
     private RecyclerView recyclerView;
@@ -102,6 +102,12 @@ public class CategoryFragment extends MyAbstractFragment {
             }
         });
     }
+
+    @Override
+    public void show() {
+
+    }
+
     public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
 
         private int spanCount;

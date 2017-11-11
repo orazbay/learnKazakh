@@ -19,15 +19,16 @@ import java.util.ArrayList;
 
 import kz.learn.orazbay.MyAbstractFragment;
 import kz.learn.orazbay.R;
+import kz.learn.orazbay.main.AnimationInitter;
+import kz.learn.orazbay.utils.MyAnimationHelper;
 
 /**
  * Created by orazbay on 10/29/17.
  */
 
-public class AlphabetFragment extends MyAbstractFragment {
+public class AlphabetFragment extends MyAbstractFragment implements AnimationInitter {
     private View view;
     CardView [] letterCards;
-    CardView letter1;
     public AlphabetFragment(){
         super(AlphabetFragment.class.getName());
     }
@@ -39,13 +40,12 @@ public class AlphabetFragment extends MyAbstractFragment {
         view=inflater.inflate(R.layout.fragment_alphabet,container,false);
         findViews();
         initLetters();
-        setupToolBar();
+//        setupToolBar();
         return view;
     }
 
     @Override
     public void findViews() {
-        letter1=view.findViewById(R.id.letter1);
 
     }
     private void setupToolBar(){
@@ -61,18 +61,6 @@ public class AlphabetFragment extends MyAbstractFragment {
     @Override
     public void onResume() {
         super.onResume();
-        animateLetter(0);
-    }
-    private void animateLetter(final int index){
-        if (index<letterCards.length){
-            letterCards[index].setVisibility(View.VISIBLE);
-            YoYo.with(Techniques.ZoomIn).duration(200).onEnd(new YoYo.AnimatorCallback() {
-                @Override
-                public void call(Animator animator) {
-                    animateLetter(index+1);
-                }
-            }).playOn(letterCards[index]);
-        }
     }
 
     private void initLetters(){
@@ -111,10 +99,20 @@ public class AlphabetFragment extends MyAbstractFragment {
                 view.findViewById(R.id.letter32)
         };
         for (CardView letterCard:letterCards){
-            letterCard.setVisibility(View.INVISIBLE);
+//            letterCard.setVisibility(View.INVISIBLE);
             ColorGenerator generator = ColorGenerator.MATERIAL;
             letterCard.setCardBackgroundColor(generator.getRandomColor());
 
         }
+    }
+
+    @Override
+    public void show() {
+        MyAnimationHelper.invokeForView(context,view.findViewById(R.id.row1),R.anim.slide_in_down,null);
+        MyAnimationHelper.invokeForView(context,view.findViewById(R.id.row2),R.anim.slide_in_left,null);
+        MyAnimationHelper.invokeForView(context,view.findViewById(R.id.row3),R.anim.slide_in_right,null);
+        MyAnimationHelper.invokeForView(context,view.findViewById(R.id.row4),R.anim.slide_in_left,null);
+        MyAnimationHelper.invokeForView(context,view.findViewById(R.id.row5),R.anim.slide_in_right,null);
+        MyAnimationHelper.invokeForView(context,view.findViewById(R.id.row6),R.anim.slide_in_up,null);
     }
 }

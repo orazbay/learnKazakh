@@ -11,13 +11,14 @@ import com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager;
 import io.realm.RealmResults;
 import kz.learn.orazbay.MyAbstractFragment;
 import kz.learn.orazbay.R;
+import kz.learn.orazbay.main.AnimationInitter;
 import kz.learn.orazbay.models.Word;
 
 /**
  * Created by orazbay on 10/29/17.
  */
 
-public class WordsFragment extends MyAbstractFragment {
+public class WordsFragment extends MyAbstractFragment implements AnimationInitter {
     private View view;
     public WordsFragment(){
         super(WordsFragment.class.getName());
@@ -36,5 +37,10 @@ public class WordsFragment extends MyAbstractFragment {
     @Override
     public void findViews() {
 
+    }
+
+    @Override
+    public void show() {
+        
     }
 }
