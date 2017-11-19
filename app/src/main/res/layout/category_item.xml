@@ -12,6 +12,7 @@
         android:layout_margin="5dp"
         >
         <LinearLayout
+            android:padding="10dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -20,17 +21,17 @@
                 android:src="@mipmap/ic_launcher_round"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
+                android:layout_height="150dp"
                 android:scaleType="fitXY"/>
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/album_title_padding"
-                android:paddingRight="@dimen/album_title_padding"
                 android:paddingTop="@dimen/album_title_padding"
-                android:textColor="@color/album_title"
-                android:textSize="@dimen/album_title"
+                android:textColor="#005fb0"
+                android:textSize="17sp"
+                android:typeface="serif"
+                android:textStyle="italic"
                 android:paddingBottom="@dimen/songs_count_padding_bottom"/>
         </LinearLayout>
 

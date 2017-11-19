@@ -20,7 +20,7 @@ public class MyApplication extends Application {
         Realm.init(this);
 
         if (Functions.getStringFromSP(this, ControllerWords.IS_WORDS_INSERTED).equals("null")){
-            ControllerWords.insertWords();
+            ControllerWords.insertWords(this);
             Scheduler.schedule(this);
             Functions.saveStringToSP(this,ControllerWords.IS_WORDS_INSERTED,"yes");
         }

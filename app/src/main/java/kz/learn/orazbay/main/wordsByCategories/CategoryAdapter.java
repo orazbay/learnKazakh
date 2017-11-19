@@ -1,6 +1,7 @@
 package kz.learn.orazbay.main.wordsByCategories;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +21,7 @@ import kz.learn.orazbay.utils.Functions;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
     private Context context;
-    private ArrayList<String> categories;
+    private ArrayList<Category> categories;
 
 
     class CategoryViewHolder extends RecyclerView.ViewHolder {
@@ -32,10 +33,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             super(view);
             this.view=view;
             textView = view.findViewById(R.id.textView);
+            imageView=view.findViewById(R.id.imageView);
         }
     }
     //adapters constructor
-    public CategoryAdapter(Context context, ArrayList<String> categories){
+    public CategoryAdapter(Context context, ArrayList<Category> categories){
         this.context=context;
         this.categories=categories;
     }
@@ -49,13 +51,17 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     @Override
     public void onBindViewHolder(CategoryViewHolder holder, int position) {
+        final Category category=categories.get(position);
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Functions.ReplaceFragmentWithStack(context,new WordsFragment());
+                WordsFragment wordsFragment=new WordsFragment();
+                wordsFragment.setCategory(category.getName());
+                Functions.ReplaceFragmentWithStack(context,wordsFragment);
             }
         });
-        holder.textView.setText(categories.get(position));
+        holder.textView.setText(category.getName());
+        holder.imageView.setImageResource(category.getImageId());
     }
 
     @Override

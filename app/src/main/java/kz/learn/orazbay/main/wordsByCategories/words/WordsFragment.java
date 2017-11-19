@@ -11,6 +11,9 @@ import com.mindorks.placeholderview.SwipeDecor;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
 import com.mindorks.placeholderview.listeners.ItemRemovedListener;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import kz.learn.orazbay.MyAbstractFragment;
 import kz.learn.orazbay.R;
 import kz.learn.orazbay.data.ControllerWords;
@@ -24,6 +27,11 @@ import kz.learn.orazbay.utils.Functions;
 
 public class WordsFragment extends MyAbstractFragment {
     private SwipePlaceHolderView mSwipeView;
+    private String category;
+    private ArrayList<Object> words;
+    public void setCategory(String category){
+        this.category=category;
+    }
     public WordsFragment(){
         super(WordsFragment.class.getName(),R.layout.fragment_words1);
     }
@@ -32,7 +40,6 @@ public class WordsFragment extends MyAbstractFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-//        view=inflater.inflate(R.layout.fragment_words1,container,false);
         findViews();
         mSwipeView.getBuilder()
                 .setDisplayViewCount(3)
@@ -47,7 +54,8 @@ public class WordsFragment extends MyAbstractFragment {
                     TestFragment testFragment=new TestFragment();
                     Bundle bundle=new Bundle();
                     bundle.putInt(TestFragment.WORDS_TYPE,TestFragment.WORDS_BY_CATEGORY);
-                    bundle.putString("category","отбасы");
+                    bundle.putString("category",category);
+                    testFragment.setWords(words);
                     testFragment.setArguments(bundle);
                     Functions.RemoveOldFragmentAndReplace(context,WordsFragment.class.getName(),testFragment);
 //                    Functions.ReplaceFragmentWithStack(context,testFragment);
@@ -56,8 +64,9 @@ public class WordsFragment extends MyAbstractFragment {
                 }
             }
         });
-        for (Word word: ControllerWords.getWordsByCategory("отбасы")){
-            mSwipeView.addView(new WordCard(context,word,mSwipeView));
+        words= ControllerWords.getRandomWords(category,10);
+        for (Object wordObject: words){
+            mSwipeView.addView(new WordCard(context,(Word)wordObject,mSwipeView));
         }
 
 

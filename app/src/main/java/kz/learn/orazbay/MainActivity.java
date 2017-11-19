@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
+import java.util.Arrays;
+
+import kz.learn.orazbay.data.ControllerWords;
 import kz.learn.orazbay.main.MainPageFragment;
 import kz.learn.orazbay.main.wordsByCategories.words.test.TestFragment;
 import kz.learn.orazbay.utils.Functions;

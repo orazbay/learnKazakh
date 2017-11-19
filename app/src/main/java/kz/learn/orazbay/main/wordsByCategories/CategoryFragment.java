@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import kz.learn.orazbay.MyAbstractFragment;
 import kz.learn.orazbay.R;
@@ -29,7 +30,7 @@ public class CategoryFragment extends MyAbstractFragment implements AnimationIni
 
     private RecyclerView recyclerView;
     private CategoryAdapter adapter;
-    private ArrayList<String> categories;
+    private ArrayList<Category> categories;
     public CategoryFragment(){
         super(CategoryFragment.class.getName(),R.layout.fragment_category);
     }
@@ -45,12 +46,13 @@ public class CategoryFragment extends MyAbstractFragment implements AnimationIni
 
         initCollapsingToolbar();
 
-        categories=new ArrayList<>();
-        categories.add("Музыка");
-        categories.add("Спорт");
-        categories.add("Жануарлар");
-        categories.add("Технологиялар");
-        categories.add("Мемлекет");
+        categories=new ArrayList<>(Arrays.asList(new Category[]{
+                new Category("Семья",R.drawable.ic_family),
+                new Category("Бытовые",R.drawable.ic_sweater),
+                new Category("Животные",R.drawable.ic_whale),
+                new Category("Части тела",R.drawable.ic_muscle),
+                new Category("Спорт",R.drawable.ic_tennis)
+        }));
 
         adapter=new CategoryAdapter(context,categories);
 

@@ -37,7 +37,11 @@ public class TestFragment extends MyAbstractFragment implements View.OnClickList
     Button restartBtn,finishBtn;
 
 
-    ArrayList<Object> words;
+    private ArrayList<Object> words;
+
+    public void setWords(ArrayList<Object> words) {
+        this.words = words;
+    }
 
     Random random=new Random();
 
@@ -54,6 +58,7 @@ public class TestFragment extends MyAbstractFragment implements View.OnClickList
 
     public final static int WORDS_BY_CATEGORY=0;
     public final static int WORDS_TO_LEARN=1;
+    public final static int WORDS_WITHOUT_CATEGORY=2;
 
     private int type;
     private String category=null;
@@ -187,8 +192,8 @@ public class TestFragment extends MyAbstractFragment implements View.OnClickList
     private void initWords(){
         correctAnswersCount=0;
         switch (type){
-            case WORDS_BY_CATEGORY:
-                words= new ArrayList<>(Arrays.asList(ControllerWords.getWordsByCategory(category).toArray()));
+            case WORDS_WITHOUT_CATEGORY:
+                words= ControllerWords.getRandomWords(null,10);
                 break;
             case WORDS_TO_LEARN:
                 words= new ArrayList<>(Arrays.asList(ControllerWords.getWordsHaveToLearn().toArray()));

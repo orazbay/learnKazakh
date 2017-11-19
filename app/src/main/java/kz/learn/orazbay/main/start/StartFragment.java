@@ -17,6 +17,7 @@ import kz.learn.orazbay.main.AnimationInitter;
 import kz.learn.orazbay.main.settings.NameDilaogInterface;
 import kz.learn.orazbay.main.settings.SettingsFragment;
 import kz.learn.orazbay.main.start.match_words.MatchTheWordsFragment;
+import kz.learn.orazbay.main.wordsByCategories.words.test.TestFragment;
 import kz.learn.orazbay.utils.Functions;
 import kz.learn.orazbay.utils.MyAnimationHelper;
 
@@ -89,7 +90,11 @@ public class StartFragment extends MyAbstractFragment implements View.OnClickLis
                 Functions.ReplaceFragmentWithStack(context,new MatchTheWordsFragment());
                 break;
             case R.id.button3:
-
+                TestFragment testFragment=new TestFragment();
+                Bundle bundle=new Bundle();
+                bundle.putInt(TestFragment.WORDS_TYPE,TestFragment.WORDS_WITHOUT_CATEGORY);
+                testFragment.setArguments(bundle);
+                Functions.ReplaceFragmentWithStack(context,testFragment);
                 break;
         }
     }

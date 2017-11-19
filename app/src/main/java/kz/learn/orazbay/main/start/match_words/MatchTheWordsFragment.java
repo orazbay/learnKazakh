@@ -96,7 +96,7 @@ public class MatchTheWordsFragment extends MyAbstractFragment implements MatchTh
         Collections.shuffle(btnIds);
         Iterator iterator=btnIds.iterator();
         words=new ArrayList<>();
-        for (Object object:getRandom6Words()){
+        for (Object object:ControllerWords.getRandomWords(null,6)){
             Word word=(Word)object;
             Button buttonKZ=view.findViewById((Integer)iterator.next());
             buttonKZ.setVisibility(View.VISIBLE);
@@ -110,11 +110,6 @@ public class MatchTheWordsFragment extends MyAbstractFragment implements MatchTh
 
         }
         Log.e(logTAG,words.size()+"");
-    }
-    private List<Object> getRandom6Words(){
-        ArrayList<Object> words= new ArrayList<>(Arrays.asList(ControllerWords.getAll().toArray()));
-        Collections.shuffle(words);
-        return words.subList(0,6);
     }
     @Override
     public void onWordClicked(final CardWord cardWord) {
