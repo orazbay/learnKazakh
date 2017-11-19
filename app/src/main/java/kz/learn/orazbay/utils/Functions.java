@@ -61,7 +61,7 @@ public class Functions {
     public static void RemoveOldFragmentAndReplace(Context context,String oldFragmentName,Fragment newFragment){
         FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.setCustomAnimations(android.R.anim.fade_in,android.R.anim.fade_out);
+//        transaction.setCustomAnimations(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
         transaction.replace(R.id.container, newFragment);
         manager.popBackStack(oldFragmentName,1);
         transaction.addToBackStack(newFragment.getClass().getName());

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Учим казахский</string>
+    <string name="app_name">Учим Казахский</string>
 
     <string name="start">Начать</string>
     <string name="alphabet">Алфавит</string>
@@ -14,7 +14,10 @@
     <string name="match_the_words">Пары слов</string>
     <string name="questions">Вопросы</string>
     <string name="soon">Скоро</string>
-    
-    
+
+    <string name="name">Имя:</string>
+    <string name="enter_your_name">Введите ваше имя:</string>
+    <string name="share">Поделиться:</string>
+
 
 </resources>

@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent intent=getIntent();
+        Intent intent1=new Intent(this,SplashActivity.class);
+        startActivity(intent1);
         if (intent!=null) {
             if (intent.getIntExtra("FLAG_NOTIFY_LEARN", -1) == NotificationUtils.FLAG_NOTIFY_LEARN) {
                 TestFragment testFragment = new TestFragment();
@@ -28,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
             }else {
                 Functions.ReplaceFragmentWithStack(this,new MainPageFragment());
             }
-            test();
         }
     }
     @Override
@@ -48,11 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-    private void test(){
-        Activity activity=new Activity();
-        Activity activity1=new Activity();
-        Log.e(logTAG,activity.equals(activity1)+"");
     }
 
 }

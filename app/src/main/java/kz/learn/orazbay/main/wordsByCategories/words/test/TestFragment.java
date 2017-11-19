@@ -31,7 +31,6 @@ import kz.learn.orazbay.utils.MyAnimationHelper;
  */
 
 public class TestFragment extends MyAbstractFragment implements View.OnClickListener,Animation.AnimationListener {
-    private View view;
     FittingTextView wordToAskTV;
     LinearLayout firstButtonsLayout,secondButtonsLayout;
     TextView backgroundTV,tvEnd;
@@ -64,7 +63,7 @@ public class TestFragment extends MyAbstractFragment implements View.OnClickList
 
 
     public TestFragment(){
-        super(TestFragment.class.getName());
+        super(TestFragment.class.getName(),R.layout.fragment_test);
     }
 
     @Override
@@ -77,7 +76,7 @@ public class TestFragment extends MyAbstractFragment implements View.OnClickList
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        view=inflater.inflate(R.layout.fragment_test,container,false);
+//        view=inflater.inflate(R.layout.fragment_test,container,false);
         findViews();
 
         initButtons();

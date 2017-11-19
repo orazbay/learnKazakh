@@ -23,17 +23,16 @@ import kz.learn.orazbay.utils.Functions;
  */
 
 public class WordsFragment extends MyAbstractFragment {
-    private View view;
     private SwipePlaceHolderView mSwipeView;
     public WordsFragment(){
-        super(WordsFragment.class.getName());
+        super(WordsFragment.class.getName(),R.layout.fragment_words1);
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        view=inflater.inflate(R.layout.fragment_words1,container,false);
+//        view=inflater.inflate(R.layout.fragment_words1,container,false);
         findViews();
         mSwipeView.getBuilder()
                 .setDisplayViewCount(3)

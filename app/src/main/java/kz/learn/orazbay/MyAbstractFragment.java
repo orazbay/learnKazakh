@@ -15,8 +15,11 @@ import android.view.ViewGroup;
 public abstract class MyAbstractFragment extends Fragment {
     public String logTAG;
     public MainActivity context;
-    public MyAbstractFragment(String logTAG){
+    public View view;
+    private int layoutId;
+    public MyAbstractFragment(String logTAG,int layoutId){
         this.logTAG=logTAG;
+        this.layoutId=layoutId;
     }
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,6 +31,7 @@ public abstract class MyAbstractFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.e(logTAG,"onCreateView");
+        view=inflater.inflate(layoutId,container,false);
         return super.onCreateView(inflater, container, savedInstanceState);
     }
     @Override

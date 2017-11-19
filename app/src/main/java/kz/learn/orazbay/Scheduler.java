@@ -20,11 +20,11 @@ import static android.content.Context.NOTIFICATION_SERVICE;
 
 public class Scheduler {
     private static String  logTAG=Scheduler.class.getName();
-    private static int [] hoursToRemind=new int[]{9,11,13,15,18,21,23,0};
+    private static int [] hoursToRemind=new int[]{9,11,13,15,18,19,21,23,0};
     public static void schedule(Context context){
         Log.e(logTAG,"schedule");
         Calendar calendar=Calendar.getInstance();
-        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.MINUTE, 50);
         calendar.set(Calendar.SECOND, 0);
         AlarmManager alarmManager=(AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         if (alarmManager!=null) {

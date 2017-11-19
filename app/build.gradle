@@ -21,10 +21,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'nl.dionsegijn:konfetti:1.1.0'
     implementation 'com.aurelhubert:ahbottomnavigation:2.0.6'
-    implementation 'com.github.glomadrian:MaterialAnimatedSwitch:1.1@aar'
-    implementation 'com.zcw:togglebutton-library:1.0.0'
     implementation 'com.github.jd-alexander:LikeButton:0.2.3'
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:support-compat:26.1.0'
@@ -36,7 +34,6 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.github.devlight:infinitecycleviewpager:1.0.2'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    implementation 'com.github.clans:fab:1.6.4'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'

@@ -7,7 +7,7 @@
     android:background="@color/background_color">
     <ImageView
         android:layout_margin="7dp"
-        android:src="@drawable/round_uzor"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     <com.mindorks.placeholderview.SwipePlaceHolderView

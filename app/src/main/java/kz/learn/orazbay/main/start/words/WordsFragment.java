@@ -19,16 +19,15 @@ import kz.learn.orazbay.models.Word;
  */
 
 public class WordsFragment extends MyAbstractFragment implements AnimationInitter {
-    private View view;
     public WordsFragment(){
-        super(WordsFragment.class.getName());
+        super(WordsFragment.class.getName(),R.layout.fragment_words);
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        view=inflater.inflate(R.layout.fragment_words,container,false);
+//        view=inflater.inflate(R.layout.fragment_words,container,false);
         final HorizontalInfiniteCycleViewPager horizontalInfiniteCycleViewPager = view.findViewById(R.id.hicvp);
         horizontalInfiniteCycleViewPager.setAdapter(new HorizontalPagerAdapter(getContext(), true));
         return view;

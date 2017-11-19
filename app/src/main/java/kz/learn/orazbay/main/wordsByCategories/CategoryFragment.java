@@ -26,13 +26,12 @@ import kz.learn.orazbay.utils.Functions;
  */
 
 public class CategoryFragment extends MyAbstractFragment implements AnimationInitter{
-    private View view;
 
     private RecyclerView recyclerView;
     private CategoryAdapter adapter;
     private ArrayList<String> categories;
     public CategoryFragment(){
-        super(CategoryFragment.class.getName());
+        super(CategoryFragment.class.getName(),R.layout.fragment_category);
     }
 
     @Nullable

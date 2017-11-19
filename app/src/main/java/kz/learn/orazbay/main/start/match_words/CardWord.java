@@ -17,7 +17,7 @@ public class CardWord {
     private String text;
     private Word word;
     private Button view;
-    private boolean isEnabled=true;
+    private boolean isEnabled=false;
     public CardWord(final MatchTheWordsFragment context, String text, final Word word, Button view){
         this.context=context;
         this.text=text;
@@ -32,6 +32,7 @@ public class CardWord {
                 context.onWordClicked(CardWord.this);
             }
         });
+        setButtonState();
         setText();
     }
 

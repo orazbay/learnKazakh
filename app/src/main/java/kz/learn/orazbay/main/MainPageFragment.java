@@ -16,17 +16,15 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import kz.learn.orazbay.MyAbstractFragment;
 import kz.learn.orazbay.R;
 import kz.learn.orazbay.main.alphabet.AlphabetFragment;
+import kz.learn.orazbay.main.settings.SettingsFragment;
 import kz.learn.orazbay.main.start.StartFragment;
 import kz.learn.orazbay.main.wordsByCategories.CategoryFragment;
-import kz.learn.orazbay.main.start.words.WordsFragment;
-import kz.learn.orazbay.main.start.match_words.MatchTheWordsFragment;
 
 /**
  * Created by orazbay on 10/29/17.
  */
 
 public class MainPageFragment extends MyAbstractFragment {
-    private View view;
     private ViewPager viewPager;
     private AHBottomNavigation ahBottomNavigation;
 
@@ -34,11 +32,11 @@ public class MainPageFragment extends MyAbstractFragment {
             new StartFragment(),
             new AlphabetFragment(),
             new CategoryFragment(),
-            new WordsFragment()
+            new SettingsFragment()
     };
 
     public MainPageFragment() {
-        super(MainPageFragment.class.getName());
+        super(MainPageFragment.class.getName(),R.layout.fragment_main_page);
     }
 
     @Nullable
@@ -85,7 +83,7 @@ public class MainPageFragment extends MyAbstractFragment {
     }
     private void setupViewPager(){
         ViewPagerAdapter adapter=new ViewPagerAdapter(getChildFragmentManager(),fragments);
-        viewPager.setOffscreenPageLimit(3);
+//        viewPager.setOffscreenPageLimit(3);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

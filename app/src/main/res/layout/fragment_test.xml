@@ -75,7 +75,7 @@
     </RelativeLayout>
     <ImageView
         android:layout_below="@id/center_divider"
-        android:src="@drawable/uzor"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     <View

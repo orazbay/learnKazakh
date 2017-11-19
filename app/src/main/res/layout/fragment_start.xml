@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
     <LinearLayout
+        android:visibility="invisible"
         android:paddingTop="50dp"
         android:paddingBottom="50dp"
         android:id="@+id/firstColumn"
@@ -30,6 +31,7 @@
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
+        android:visibility="invisible"
         android:paddingTop="50dp"
         android:paddingBottom="50dp"
         android:id="@+id/secondColumn"
